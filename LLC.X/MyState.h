@@ -3,6 +3,24 @@
 
 
 
+//public method delcare
+void State_Mehine(void);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
