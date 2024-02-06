@@ -1,6 +1,8 @@
 #ifndef __MYVALUE_H_
 #define __MYVALUE_H_
 
+#include "MySystem.h"
+
 //Value
 extern uint8_t state; 
 // Struct
