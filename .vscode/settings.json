@@ -3,6 +3,7 @@
     "files.associations": {
         "myvalue.h": "c",
         "mystate.h": "c",
-        "mysystem.h": "c"
+        "mysystem.h": "c",
+        "mycontrol.h": "c"
     }
 }

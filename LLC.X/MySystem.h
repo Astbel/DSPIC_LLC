@@ -5,6 +5,7 @@
 #include "stdlib.h"
 #include "string.h"
 
+
 /*上限值Max&Min設置**暫定**/
 #define MAX_DUTY  314 
 #define MIN_DUTY    0
@@ -14,6 +15,18 @@
 
 /*12V 數位值暫定 12bit 解析度*/
 #define Vout_Digit 1785
+/*保護時間 ISR 100us*/
+#define Protect_Time 1000  
+/*各保護目標定義 12bit resloution*/
+#define LLC_UVP_Threshold 1607  //10.8v
+#define LLC_OTP_Threshold 1224  //110度
+/*duty 判斷 or LLC 側電流*/
+#define LLC_SCP_Threshold  4.6  //duty大小 
+/*12V OCP 暫定義 須修正成dynamic */
+#define LLC_OCP_Threshold 4096  //Full Scale
+/*DD 保護需修正為動態事件目前暫定*/
+#define LLC_DD_5V_Threshold    1843
+#define LLC_DD_3_3V_Threshold  1843
 
 /*Boolean*/
 #define True  1
@@ -22,8 +35,11 @@
 #define High  1
 #define Low   0
 
+/*ISR 這裡預定義事件發生為 100us*/
 /*定義TimeStick*/
 #define PGI_Time_Stick  100
 
+/*定義 PowerFail 時間 先定義為ms*/
+#define Power_Fail_Seq_Time 20
 
 #endif
