@@ -3,6 +3,9 @@
 
 #include "MySystem.h"
 
+//Value
+extern uint16_t Load_Gear;
+
 // Value--counter
 extern uint16_t Power_Fail_Cnt;
 extern uint16_t LLC_Ramp_Cnt;

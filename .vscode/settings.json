@@ -4,6 +4,7 @@
         "myvalue.h": "c",
         "mystate.h": "c",
         "mysystem.h": "c",
-        "mycontrol.h": "c"
+        "mycontrol.h": "c",
+        "string.h": "c"
     }
 }

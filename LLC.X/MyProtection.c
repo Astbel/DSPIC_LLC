@@ -83,3 +83,19 @@ void LLC_DD_OCP(void)
         }
     }
 }
+
+/**
+ * @brief
+ * 計算當前系統load狀態包含12V DD
+ * 回傳至1次側透過boost調整LLC gain bandwith
+ *
+ * 傳輸至master I2C UART 未知 worst case PWM DUTY
+ * 
+ * 計算方式: (12V + 5V * 總DD輸出瓦數+3.3*總DD輸出瓦數)>>ADC解析度 
+ */
+void PSU_Load(void)
+{
+    Load_Gear = (_LLC_ADC->adc_12V_Io_Sense +
+                 _LLC_ADC->adc_5V_Io_Sense * DD_5V_ADC_Gain +
+                 _LLC_ADC->adc_3_3V_Io_Sense * DD_3_3V_ADC_Gain)/ADC_Reslotion;
+}

@@ -26,6 +26,7 @@ My_Count *_Prot_CNT;
 uint16_t LLC_Ramp_Cnt;
 uint16_t Power_Fail_Cnt;
 uint8_t Latch_Flag;
+uint16_t Load_Gear;
 
 /*public method*/
 void My_Value_Init(void)
